@@ -56,17 +56,12 @@ export const PropertyItem: React.FC = () => {
                         parent = { {
 
                             className: 'parent',
-                            properties: [
-                                {
-                                    propName: 'display',
-                                    propValue: 'flex'
-                                },
+                            properties:  property.useTo.key === "container"?[
                                 {
                                     propName: property.name,
                                     propValue: value,
-                                    current: true
                                 },
-                            ],
+                            ]: undefined,
 
                             otherProperties: otherContainerProperties?.map(prop=>{
                                 return {propName: prop.propName, propValue: prop.propValue}
@@ -74,7 +69,32 @@ export const PropertyItem: React.FC = () => {
                          }
                         }
 
+                        // child = {
+                        //     {
+                        //         className: 'child',
+                        //
+                        //         otherProperties: otherElementProperties?.map(prop=>{
+                        //             return {propName: prop.propName, propValue: prop.propValue}
+                        //         })
+                        //     }
+                        // }
 
+                        child={otherElementProperties? {
+                            className: 'child',
+                            otherProperties: otherElementProperties?.map(prop=>{
+                                return {propName: prop.propName, propValue: prop.propValue}
+                            })
+                        }: undefined}
+
+                        childActive={property.useTo.key === 'element'? {
+                            className: 'child-active',
+                            properties: [
+                                {
+                                    propName: property.name,
+                                    propValue: value
+                                }
+                            ]
+                        }: undefined}
 
                     />
                 </div>
