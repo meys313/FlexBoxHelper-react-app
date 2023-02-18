@@ -1,0 +1,82 @@
+.property{
+  margin-top: 5rem;
+  &-title{
+
+  }
+
+  // button
+  &-buttons{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-btn{
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 2px solid #4FC3F7;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &:hover{
+      background-color: #EAF8FF;
+    }
+    &.active{
+      background-color: #4FC3F7;
+      color:#fff;
+    }
+  }
+  // end button block
+
+  // display block
+  &-display{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-content__box, &-code__box{
+    flex-basis: 48%;
+    height: 250px;
+    padding: .3rem;
+  }
+  &-content__box{
+    border: 1px solid #4FC3F7
+  }
+  &-code__box{
+    background-color: #444444;
+  }
+
+  // end display block
+
+
+  // desc-block
+  &-detail{
+    .property-desc{
+      margin-top: 2rem;
+    }
+    .desc-paragraph{
+      margin-top: 1rem;
+    }
+    .desc-title{
+      font-weight: bold;
+    }
+
+    .value-descriptions{
+      .value-desc{
+        margin-left: 2rem;
+        margin-top: .3rem;
+      }
+    }
+  }
+  //  end detail block
+
+}

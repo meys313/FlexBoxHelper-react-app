@@ -1,0 +1,11 @@
+.layout{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main{
+  flex-basis: 87vh;
+  padding-bottom: 80px;
+}
