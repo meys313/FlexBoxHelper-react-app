@@ -7,7 +7,7 @@ function App() {
       <Route path="/" element={<Layout/>}>
           <Route index element={<Flex/>}/>
       </Route>
-  ))
+  ),{basename: '/FlexBoxHelper-react-app'})
 
   return (
 
