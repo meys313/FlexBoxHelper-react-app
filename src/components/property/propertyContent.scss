@@ -2,4 +2,24 @@
   border: 1px dashed #A6A6A6;
   height: 100%;
   width: 100%;
+  display: flex;
+  .content-element{
+    color: #237397;
+    background-color: #97DFFA;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 1rem;
+    margin-right: 0.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-of-type{
+      margin-right: 0;
+    }
+
+    &.active-child{
+
+    }
+  }
 }

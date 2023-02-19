@@ -39,17 +39,18 @@ const testData: propertyInterface = {
 export const PropertyItem: React.FC = () => {
     const {property, values, otherContainerProperties, otherElementProperties} = testData;
     const [value, setValue] = useState(values[0].name)
+
     return (
         <div className="property">
             <h2>{property.name}</h2>
 
             <div className="property-buttons">
-                {values.map(value => <button className="property-btn">{value.name}</button>)}
+                {values.map(value => <button className="property-btn" onClick={()=> setValue(value.name)}>{value.name}</button>)}
             </div>
 
             <div className="property-display">
                 <div className="property-content__box">
-                    <PropertyContent/>
+                    <PropertyContent currentStyle={{useTo:property.useTo.key, styles:{[property.name]: value}}}/>
                 </div>
                 <div className="property-code__box">
                     <PropertyCode
@@ -68,16 +69,6 @@ export const PropertyItem: React.FC = () => {
                             })
                          }
                         }
-
-                        // child = {
-                        //     {
-                        //         className: 'child',
-                        //
-                        //         otherProperties: otherElementProperties?.map(prop=>{
-                        //             return {propName: prop.propName, propValue: prop.propValue}
-                        //         })
-                        //     }
-                        // }
 
                         child={otherElementProperties? {
                             className: 'child',
