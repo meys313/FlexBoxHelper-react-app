@@ -2,6 +2,7 @@
   padding: 1rem;
   color:#fff;
   font-weight: bold;
+  font-size: 14px;
 
   &__style-block{
     margin-bottom: 1rem;
@@ -19,5 +20,10 @@
       color: #fff;
       padding: .5rem;
     }
+  }
+}
+@media(max-width: 760px){
+  .property-code{
+    font-size: 16px;
   }
 }

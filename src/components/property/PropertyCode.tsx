@@ -22,14 +22,7 @@ export const PropertyCode: React.FC<OwnProps> = (props) => {
 
             <div className="property-code__style-block">
                 {`.${parent.className} {`}
-                <span className="property-code-prop">display: flex;</span>
-                {parent.properties?.map(property =>{
-                    return(
-                        <span className="property-code-prop current">
-                         {`${property.propName}: ${property.propValue};`}
-                    </span>
-                    )}
-                )}
+
                 {
                     parent.otherProperties?.map(property=>{
                         return(
@@ -39,6 +32,13 @@ export const PropertyCode: React.FC<OwnProps> = (props) => {
                         )
                     })
                 }
+                {parent.properties?.map(property =>{
+                    return(
+                        <span className="property-code-prop current">
+                         {`${property.propName}: ${property.propValue};`}
+                    </span>
+                    )}
+                )}
                 {'}'}
             </div>
 
