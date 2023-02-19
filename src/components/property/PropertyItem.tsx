@@ -45,7 +45,11 @@ export const PropertyItem: React.FC = () => {
             <h2>{property.name}</h2>
 
             <div className="property-buttons">
-                {values.map(value => <button className="property-btn" onClick={()=> setValue(value.name)}>{value.name}</button>)}
+                {values.map(v => <button
+                    className={`property-btn ${v.name === value? 'active': ''}`}
+                    onClick={()=> setValue(v.name)}>
+                    {v.name}
+                </button>)}
             </div>
 
             <div className="property-display">
