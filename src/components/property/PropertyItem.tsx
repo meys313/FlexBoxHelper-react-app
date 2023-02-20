@@ -42,7 +42,7 @@ interface OwnProps{
     data: PropertyInterface
 }
 export const PropertyItem: React.FC<OwnProps> = (props, context) => {
-    const {property,defaultValue, values, otherContainerProperties, otherElementProperties} = props.data;
+    const {property,defaultValue, values, otherContainerProperties, otherElementProperties, styleForWrapper} = props.data;
     const [value, setValue] = useState(values[0].name)
     // const test = otherContainerProperties?.reduce((acc, v) => ({...acc, ...v}), {})
 
@@ -59,9 +59,9 @@ export const PropertyItem: React.FC<OwnProps> = (props, context) => {
             </div>
 
             <div className="property-display">
-                <div className="property-content__box">
+                <div className="property-content__box" style={styleForWrapper}>
                     <PropertyContent
-                        text = {property.name === 'display'? 'Здесь какой-то текст': undefined}
+                        text = {property.name === 'display'? 'текст': undefined}
                         currentStyle={{useTo:property.useTo.key, styles:{[property.name]: value}}}
                         containerStyles={otherContainerProperties?.map
                             (prop => {return{[prop.propName]: prop.propValue}}).reduce

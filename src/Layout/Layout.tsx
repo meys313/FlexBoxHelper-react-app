@@ -6,7 +6,6 @@ import {Footer} from "../components/Footer/Footer";
 export const Layout: React.FC = () => {
     return(
         <div className={styles.layout}>
-            <Header/>
             <main>
                 <Outlet/>
             </main>

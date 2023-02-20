@@ -154,7 +154,8 @@ const data: PropertyInterface[] = [
             {name: 'Stretch', desc: 'Флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера.'},
         ],
 
-        otherContainerProperties: [{propName: 'display', propValue: 'flex' },{propName: 'height', propValue: '100%' }]
+        otherContainerProperties: [{propName: 'display', propValue: 'flex' },{propName: 'height', propValue: '100%' }],
+        styleForWrapper: {'height': '200px'}
 
     },
 
@@ -174,7 +175,8 @@ const data: PropertyInterface[] = [
             {name: 'baseline', desc: 'Элемент выравнивается по базовой линии текста.'},
             {name: 'Stretch', desc: 'Элемент растягивается таким образом, чтобы занять всё свободное пространство контейнера по поперечной оси.'}
         ],
-        otherContainerProperties:[{propName:'display', propValue: 'flex'},{propName: 'height', propValue: '100%' }]
+        otherContainerProperties:[{propName:'display', propValue: 'flex'},{propName: 'height', propValue: '100%' }],
+        styleForWrapper: {'height': '200px'}
 
     },
 
@@ -197,7 +199,8 @@ const data: PropertyInterface[] = [
             {name: 'stretch', desc: 'Строки равномерно растягиваются, заполняя свободное пространство.'}
         ],
         otherContainerProperties:[{propName:'display', propValue: 'flex'},{propName: 'flex-wrap', propValue: 'wrap'}, {propName: 'height', propValue: '100%' }],
-        otherElementProperties: [{propName: 'width', propValue: "30%"}]
+        otherElementProperties: [{propName: 'width', propValue: "30%"}],
+        styleForWrapper: {'height': '250px'}
 
     },
 
@@ -266,7 +269,8 @@ export interface PropertyInterface{
     defaultValue: string,
     values: {name: string, desc?: string}[];
     otherContainerProperties?: {propName: string, propValue: string}[]
-    otherElementProperties?: {propName: string, propValue: string}[]
+    otherElementProperties?: {propName: string, propValue: string}[];
+    styleForWrapper?: {[key:string]: string}
 }
 
 interface FlexContextInterface{

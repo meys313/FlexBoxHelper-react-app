@@ -17,9 +17,21 @@ interface OwnProps{
 export const PropertyCode: React.FC<OwnProps> = (props) => {
 
     const {parent, child, childActive} = props;
+    const currentProperties =  parent.properties?.map(property =>`${property.propName}: ${property.propValue};`)
     return (
-        <pre className="property-code">
+        <p className="property-code">
+            <button className="prop-btn-copy" onClick={()=>{
+                // @ts-ignore
+                navigator.clipboard.writeText(currentProperties)
+                    .then(() => {
 
+                    })
+                    .catch(err => {
+
+                    });
+            }}>
+                <i className="fa-solid fa-copy"></i>
+            </button>
             <div className="property-code__style-block">
                 {`.${parent.className} {`}
 
@@ -34,9 +46,9 @@ export const PropertyCode: React.FC<OwnProps> = (props) => {
                 }
                 {parent.properties?.map(property =>{
                     return(
-                        <span className="property-code-prop current">
-                         {`${property.propName}: ${property.propValue};`}
-                    </span>
+                        <p className="property-code-prop current">
+                            {currentProperties}
+                        </p>
                     )}
                 )}
                 {'}'}
@@ -76,6 +88,6 @@ export const PropertyCode: React.FC<OwnProps> = (props) => {
 
 
 
-        </pre>
+        </p>
     )
 }

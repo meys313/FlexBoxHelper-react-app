@@ -45,9 +45,8 @@
   }
   &-content__box, &-code__box{
     flex-basis: 48%;
-    height: 250px;
+    height: 280px;
     padding: .3rem;
-    overflow: hidden;
   }
   &-content__box{
     border: 1px solid #4FC3F7
@@ -91,11 +90,11 @@
       font-size: 22px;
     }
     &-content__box, &-code__box{
-      flex-basis: 80%;
+      flex-basis: 95%;
       margin: 0 auto;
     }
     &-content__box{
-      height: 250px;
+      height: auto;
     }
     &-code__box{
       margin-top: 2rem;

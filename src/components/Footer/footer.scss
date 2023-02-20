@@ -1,8 +1,15 @@
 .footer{
-  flex-basis: 5vh;
+  flex-basis: 10vh;
   background-color: #010001;
   color:#fff;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
