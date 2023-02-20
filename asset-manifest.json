@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FlexBoxHelper-react-app/static/css/main.462ed7f2.css",
-    "main.js": "/FlexBoxHelper-react-app/static/js/main.dfec18f2.js",
+    "main.css": "/FlexBoxHelper-react-app/static/css/main.89388ef2.css",
+    "main.js": "/FlexBoxHelper-react-app/static/js/main.04f7c9d7.js",
     "index.html": "/FlexBoxHelper-react-app/index.html",
-    "main.462ed7f2.css.map": "/FlexBoxHelper-react-app/static/css/main.462ed7f2.css.map",
-    "main.dfec18f2.js.map": "/FlexBoxHelper-react-app/static/js/main.dfec18f2.js.map"
+    "main.89388ef2.css.map": "/FlexBoxHelper-react-app/static/css/main.89388ef2.css.map",
+    "main.04f7c9d7.js.map": "/FlexBoxHelper-react-app/static/js/main.04f7c9d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.462ed7f2.css",
-    "static/js/main.dfec18f2.js"
+    "static/css/main.89388ef2.css",
+    "static/js/main.04f7c9d7.js"
   ]
 }
